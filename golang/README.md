@@ -1,5 +1,10 @@
 # golang
 
+[![dockeri.co](https://dockeri.co/image/snowdreamtech/golang)](https://hub.docker.com/r/snowdreamtech/golang)
+
+
+[![GitHub issues](https://img.shields.io/github/issues/snowdreamtech/dockerfiles.svg "GitHub issues")](https://github.com/snowdreamtech/dockerfiles) [![GitHub stars](https://img.shields.io/github/stars/snowdreamtech/dockerfiles.svg "GitHub stars")](https://github.com/snowdreamtech/dockerfiles)
+
 ## Tags
 
 * latest, alpine, 1, 1.16, 1.16.3, 1.16.3-alpine3.13
