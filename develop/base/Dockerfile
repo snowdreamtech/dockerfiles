@@ -38,7 +38,7 @@ LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 ENV LANG=C.utf8
 
 RUN dnf groupinstall -y "Server with GUI"; \
-    systemctl set-default multi-user.target; \
+    systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
     dev-hugepages.mount \
     sys-fs-fuse-connections.mount \
