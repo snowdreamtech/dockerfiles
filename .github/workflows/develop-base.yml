@@ -44,7 +44,7 @@ jobs:
             ghcr.io/snowdreamtech/base:develop-amd64-0.0.1            
             ghcr.io/snowdreamtech/base-develop-amd64:latest
             ghcr.io/snowdreamtech/base-develop-amd64:0.0.1       
-            snowdreamtechamd64/base:develop-amd64-latest
-            snowdreamtechamd64/base:develop-amd64-0.0.1            
-            snowdreamtechamd64/base-develop-amd64:latest
-            snowdreamtechamd64/base-develop-amd64:0.0.1      
+            snowdreamtechamd64/base:develop-latest
+            snowdreamtechamd64/base:develop-0.0.1            
+            snowdreamtechamd64/base-develop:latest
+            snowdreamtechamd64/base-develop:0.0.1    
