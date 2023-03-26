@@ -10,7 +10,10 @@ RUN mkdir /mnt/sys-root; \
     --releasever 9 \
     --setopt install_weak_deps=false \
     --nodocs -y \
+    which \ 
+    git \ 
     openssh-server \ 
+    openssh-clients \ 
     ; \
     dnf --installroot /mnt/sys-root clean all; \
     rm -rf /mnt/sys-root/var/log/dnf* /mnt/sys-root/var/log/yum.*; \
@@ -34,7 +37,8 @@ LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 
 ENV LANG=C.utf8
 
-RUN systemctl set-default multi-user.target; \
+RUN dnf groupinstall -y "Server with GUI"; \
+    systemctl set-default multi-user.target; \
     systemctl mask systemd-remount-fs.service \
     dev-hugepages.mount \
     sys-fs-fuse-connections.mount \
