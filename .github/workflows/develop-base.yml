@@ -40,7 +40,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            # snowdreamtechamd64/base:latest
-            # snowdreamtechamd64/base:0.0.1
             ghcr.io/snowdreamtech/base:develop-amd64-latest
             ghcr.io/snowdreamtech/base:develop-amd64-0.0.1            
