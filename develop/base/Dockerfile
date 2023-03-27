@@ -38,6 +38,9 @@ LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 ENV LANG=C.utf8
 
 RUN dnf groupinstall -y "Server with GUI"; \
+    sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config \
+    sed -i 's/#*PermitEmptyPasswords no/PermitEmptyPasswords yes/g' /etc/ssh/sshd_config \
+    ssh-keygen -A; \
     systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
     dev-hugepages.mount \
@@ -46,4 +49,4 @@ RUN dnf groupinstall -y "Server with GUI"; \
     getty.target \
     console-getty.service
 
-CMD ["/bin/bash"]
+CMD ["/usr/sbin/sshd","-D"]
