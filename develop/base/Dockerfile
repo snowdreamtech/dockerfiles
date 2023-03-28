@@ -17,7 +17,6 @@ RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc && \
     git \ 
     openssh-server \ 
     openssh-clients \ 
-    code \ 
     ; \
     dnf --installroot /mnt/sys-root clean all; \
     rm -rf /mnt/sys-root/var/log/dnf* /mnt/sys-root/var/log/yum.*; \
