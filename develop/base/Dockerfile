@@ -2,7 +2,6 @@ ARG SYSBASE=almalinux:9
 FROM ${SYSBASE} as system-build
 
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc \
-    && printf "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo; \
     mkdir /mnt/sys-root; \
     dnf install \
     --nogpgcheck --repoid=AppStream --repoid=BaseOS \
