@@ -39,7 +39,7 @@ LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 ENV LANG=C.utf8
 ENV DISPLAY host.docker.internal:0.0
 
-RUN RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc \
+RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc \
     && /bin/echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo \
     && dnf check-update \
     && dnf install -y code \
