@@ -1,10 +1,10 @@
 ARG SYSBASE=almalinux:9
 FROM ${SYSBASE} as system-build
 
-RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc && \
-    echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo && \
-    dnf check-update && \
-    mkdir /mnt/sys-root; \
+RUN mkdir /mnt/sys-root; \
+    rpm --import https://packages.microsoft.com/keys/microsoft.asc \
+    && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo\
+    && dnf check-update; \
     dnf install \
     --nogpgcheck --repoid=AppStream --repoid=BaseOS \
     --repofrompath='BaseOS,https://repo.almalinux.org/almalinux/9/BaseOS/$basearch/os/' \
@@ -17,6 +17,7 @@ RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc && \
     git \ 
     openssh-server \ 
     openssh-clients \ 
+    code \ 
     ; \
     dnf --installroot /mnt/sys-root clean all; \
     rm -rf /mnt/sys-root/var/log/dnf* /mnt/sys-root/var/log/yum.*; \
