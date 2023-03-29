@@ -15,8 +15,7 @@ RUN  dnf install \
     make \
     bison \
     gcc \
-    glibc-devel \
-    mercurial; \
+    glibc-devel; \
     bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) \
     && source ~/.bashrc \
     && gvm install go${GOLANG_VERSION} -B \
