@@ -10,4 +10,10 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | 
     && nvm use ${NODEJS_VERSION} \
     && npm install -g pnpm \
     && npm install -g yarn \
-    && npm install -g nrm;
+    && npm install -g nrm; \
+    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
+    octref.vetur \
+    Vue.volar \ 
+    Vue.vscode-typescript-vue-plugin \ 
+    hollowtree.vue-snippets \
+    ;

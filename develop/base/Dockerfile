@@ -59,6 +59,14 @@ RUN dnf groupinstall -y "Server with GUI"; \
     code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
     ms-vscode.vs-keybindings\
     vscode-icons-team.vscode-icons \
+    gerane.Theme-Solarized-dark \
+    gerane.Theme-Solarized-light \
+    wesbos.theme-cobalt2 \ 
+    Equinusocio.vsc-material-theme \
+    PKief.material-icon-theme \
+    GitHub.github-vscode-theme \
+    wayou.vscode-icons-mac \
+    file-icons.file-icons \
     ms-vscode-remote.vscode-remote-extensionpack \
     MS-CEINTL.vscode-language-pack-zh-hans \ 
     MS-CEINTL.vscode-language-pack-zh-hant \
