@@ -59,8 +59,7 @@ RUN dnf groupinstall -y "Server with GUI"; \
     code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
     ms-vscode.vs-keybindings\
     vscode-icons-team.vscode-icons \
-    gerane.Theme-Solarized-dark \
-    gerane.Theme-Solarized-light \
+    ryanolsonx.solarized \
     wesbos.theme-cobalt2 \ 
     Equinusocio.vsc-material-theme \
     PKief.material-icon-theme \
