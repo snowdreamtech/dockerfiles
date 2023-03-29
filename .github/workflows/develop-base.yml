@@ -2,7 +2,7 @@ name: base-develop-amd64
 on:
   push:
     paths:
-      - 'develop/base/Dockerfile'
+      - 'develop/base/**'
   workflow_dispatch:
 jobs:
   docker:

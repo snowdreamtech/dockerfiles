@@ -2,7 +2,7 @@ name: vue-develop-amd64
 on:
   push:
     paths:
-      - 'develop/vue/Dockerfile'
+      - 'develop/vue/**'
   workflow_dispatch:
 jobs:
   docker:

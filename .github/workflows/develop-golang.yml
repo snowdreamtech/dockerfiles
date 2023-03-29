@@ -2,7 +2,7 @@ name: golang-develop-amd64
 on:
   push:
     paths:
-      - 'develop/golang/Dockerfile'
+      - 'develop/golang/**'
   workflow_dispatch:
 jobs:
   docker:
