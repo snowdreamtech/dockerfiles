@@ -14,5 +14,5 @@ RUN  dnf install \
     glibc-devel; \
     bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) \
     && source ~/.bashrc \
-    && gvm install go${GOLANG_VERSION} \
+    && gvm install go${GOLANG_VERSION} -B \
     && gvm use go${GOLANG_VERSION} --default;
