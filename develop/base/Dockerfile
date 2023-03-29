@@ -37,8 +37,9 @@ COPY --from=system-build /mnt/sys-root/ /
 
 LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 
-ENV LANG=C.utf8
-ENV DISPLAY host.docker.internal:0.0
+ENV LANG=C.utf8 \
+    DISPLAY=host.docker.internal:0.0 \
+    DONT_PROMPT_WSL_INSTALL=true
 
 RUN dnf groupinstall -y "Server with GUI"; \
     sed -i 's/#*#X11Forwarding no/#X11Forwarding yes/g' /etc/ssh/sshd_config; \
