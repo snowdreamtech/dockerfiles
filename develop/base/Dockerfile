@@ -56,26 +56,25 @@ RUN dnf groupinstall -y "Server with GUI"; \
     sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*PermitEmptyPasswords no/PermitEmptyPasswords yes/g' /etc/ssh/sshd_config; \
     ssh-keygen -A; \
-    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
-    ms-vscode.vs-keybindings \
-    vscode-icons-team.vscode-icons \
-    ryanolsonx.solarized \
-    wesbos.theme-cobalt2 \ 
-    Equinusocio.vsc-material-theme \
-    PKief.material-icon-theme \
-    GitHub.github-vscode-theme \
-    wayou.vscode-icons-mac \
-    file-icons.file-icons \
-    ms-vscode-remote.vscode-remote-extensionpack \
-    MS-CEINTL.vscode-language-pack-zh-hans \ 
-    MS-CEINTL.vscode-language-pack-zh-hant \
-    kisstkondoros.vscode-gutter-preview \
-    SimonSiefke.svg-preview \ 
-    mhutchie.git-graph \
-    mtxr.sqltools \
-    yzhang.markdown-all-in-one \
-    shd101wyy.markdown-preview-enhanced \
-    aaron-bond.better-comments \
+    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension ms-vscode.vs-keybindings \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension vscode-icons-team.vscode-icons \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension ryanolsonx.solarized \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension wesbos.theme-cobalt2 \ 
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension Equinusocio.vsc-material-theme \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension PKief.material-icon-theme \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension GitHub.github-vscode-theme \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension wayou.vscode-icons-mac \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension file-icons.file-icons \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension ms-vscode-remote.vscode-remote-extensionpack \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension MS-CEINTL.vscode-language-pack-zh-hans \ 
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension MS-CEINTL.vscode-language-pack-zh-hant \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension kisstkondoros.vscode-gutter-preview \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension SimonSiefke.svg-preview \ 
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension mhutchie.git-graph \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension mtxr.sqltools \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension yzhang.markdown-all-in-one \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension shd101wyy.markdown-preview-enhanced \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension aaron-bond.better-comments \
     ; \
     systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
