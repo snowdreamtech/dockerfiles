@@ -20,6 +20,5 @@ RUN  dnf install \
     && source ~/.bashrc \
     && gvm install go${GOLANG_VERSION} -B \
     && gvm use go${GOLANG_VERSION} --default; \
-    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
-    golang.go \ 
+    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension golang.go \
     ;
