@@ -12,6 +12,16 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | 
     && npm install -g yarn \
     && npm install -g nrm; \
     code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
+    dbaeumer.vscode-eslint \
+    formulahendry.auto-close-tag \
+    formulahendry.auto-rename-tag \
+    xabikos.JavaScriptSnippets \
+    christian-kohler.path-intellisense \
+    ecmel.vscode-html-css \
+    christian-kohler.npm-intellisense \
+    esbenp.prettier-vscode \
+    HookyQR.beautify \ 
+    antfu.vite \
     octref.vetur \
     Vue.volar \ 
     Vue.vscode-typescript-vue-plugin \ 
