@@ -57,7 +57,7 @@ RUN dnf groupinstall -y "Server with GUI"; \
     sed -i 's/#*PermitEmptyPasswords no/PermitEmptyPasswords yes/g' /etc/ssh/sshd_config; \
     ssh-keygen -A; \
     code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
-    ms-vscode.vs-keybindings\
+    ms-vscode.vs-keybindings \
     vscode-icons-team.vscode-icons \
     ryanolsonx.solarized \
     wesbos.theme-cobalt2 \ 
@@ -74,7 +74,8 @@ RUN dnf groupinstall -y "Server with GUI"; \
     mhutchie.git-graph \
     mtxr.sqltools \
     yzhang.markdown-all-in-one \
-    shd101wyy.markdown-preview-enhanced; \
+    shd101wyy.markdown-preview-enhanced \
+    ; \
     systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
     dev-hugepages.mount \
