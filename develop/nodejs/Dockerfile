@@ -11,14 +11,13 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | 
     && npm install -g pnpm \
     && npm install -g yarn \
     && npm install -g nrm; \
-    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
-    dbaeumer.vscode-eslint \
-    formulahendry.auto-close-tag \
-    formulahendry.auto-rename-tag \
-    xabikos.JavaScriptSnippets \
-    christian-kohler.path-intellisense \
-    ecmel.vscode-html-css \
-    christian-kohler.npm-intellisense \
-    esbenp.prettier-vscode \
-    HookyQR.beautify \ 
+    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension dbaeumer.vscode-eslint \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension formulahendry.auto-close-tag \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension formulahendry.auto-rename-tag \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension xabikos.JavaScriptSnippets \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension christian-kohler.path-intellisense \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension ecmel.vscode-html-css \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension christian-kohler.npm-intellisense \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension esbenp.prettier-vscode \
+    && code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension HookyQR.beautify \ 
     ;
