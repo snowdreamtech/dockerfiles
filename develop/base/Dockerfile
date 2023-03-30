@@ -75,6 +75,7 @@ RUN dnf groupinstall -y "Server with GUI"; \
     mtxr.sqltools \
     yzhang.markdown-all-in-one \
     shd101wyy.markdown-preview-enhanced \
+    aaron-bond.better-comments \
     ; \
     systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
