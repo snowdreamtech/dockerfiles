@@ -1,4 +1,4 @@
-FROM ghcr.io/snowdreamtech/base-develop-amd64:0.0.2
+FROM ghcr.io/snowdreamtech/base-develop-amd64:0.0.3
 
 LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 
