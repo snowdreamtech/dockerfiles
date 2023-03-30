@@ -56,6 +56,26 @@ RUN dnf groupinstall -y "Server with GUI"; \
     sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*PermitEmptyPasswords no/PermitEmptyPasswords yes/g' /etc/ssh/sshd_config; \
     ssh-keygen -A; \
+    code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension \
+    ms-vscode.vs-keybindings \
+    vscode-icons-team.vscode-icons \
+    ryanolsonx.solarized \
+    wesbos.theme-cobalt2 \ 
+    Equinusocio.vsc-material-theme \
+    PKief.material-icon-theme \
+    GitHub.github-vscode-theme \
+    wayou.vscode-icons-mac \
+    file-icons.file-icons \
+    ms-vscode-remote.vscode-remote-extensionpack \
+    MS-CEINTL.vscode-language-pack-zh-hans \ 
+    MS-CEINTL.vscode-language-pack-zh-hant \
+    kisstkondoros.vscode-gutter-preview \
+    SimonSiefke.svg-preview \ 
+    mhutchie.git-graph \
+    mtxr.sqltools \
+    yzhang.markdown-all-in-one \
+    shd101wyy.markdown-preview-enhanced \
+    ; \
     systemctl set-default graphical.target; \
     systemctl mask systemd-remount-fs.service \
     dev-hugepages.mount \
