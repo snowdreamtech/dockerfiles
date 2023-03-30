@@ -9,6 +9,8 @@ RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | 
     && nvm install ${NODEJS_VERSION} \
     && nvm use ${NODEJS_VERSION} \
     && npm install -g pnpm \
+    && pnpm setup \
+    && source ~/.bashrc \
     && npm install -g yarn \
     && npm install -g nrm; \
     code --no-sandbox --user-data-dir=${HOME}/.vscode --force --install-extension dbaeumer.vscode-eslint \
