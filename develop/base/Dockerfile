@@ -42,13 +42,13 @@ ENV LANG=C.utf8 \
     DONT_PROMPT_WSL_INSTALL=true
 
 RUN dnf groupinstall -y "Server with GUI"; \
-    sed -i 's/#*#X11Forwarding no/#X11Forwarding yes/g' /etc/ssh/sshd_config; \
+    sed -i 's/#*#X11Forwarding yes/#X11Forwarding yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*MaxAuthTries 6/MaxAuthTries 6/g' /etc/ssh/sshd_config; \
     sed -i 's/#*MaxSessions 10/MaxAuthTries 100/g' /etc/ssh/sshd_config; \
     sed -i 's/#*StrictModes yes/StrictModes yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*PrintLastLog yes/PrintLastLog yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*ClientAliveInterval 0/ClientAliveInterval 0/g' /etc/ssh/sshd_config; \
-    sed -i 's/#*ClientAliveCountMax 0/ClientAliveCountMax 0/g' /etc/ssh/sshd_config; \
+    sed -i 's/#*ClientAliveCountMax 3/ClientAliveCountMax 3/g' /etc/ssh/sshd_config; \
     sed -i 's/#*PubkeyAuthentication yes/PubkeyAuthentication yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*PasswordAuthentication yes/PermitRootLogin yes/g' /etc/ssh/sshd_config; \
     sed -i 's/#*GSSAPIAuthentication no/GSSAPIAuthentication no/g' /etc/ssh/sshd_config; \
