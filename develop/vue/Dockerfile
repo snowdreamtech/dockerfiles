@@ -2,6 +2,8 @@ FROM ghcr.io/snowdreamtech/base-develop-amd64:0.0.3
 
 LABEL maintainer="sn0wdr1am <sn0wdr1am@qq.com>"
 
+COPY .npmrc /root/.npmrc
+
 ENV NODEJS_VERSION 18.15.0
 
 RUN wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash \
